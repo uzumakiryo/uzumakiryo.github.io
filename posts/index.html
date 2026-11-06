@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+<title>uzumakiryo的因陀罗相关扫描存档</title>
+<meta content="width=device-width,minimum-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="Hugo 0.169.0" name="generator"/>
+<meta content="index, follow" name="robots"/>
+<link crossorigin="anonymous" href="/ananke/css/main.02a37ad6c4e155c542d276915a0e3f83f5c7c5fec443350f6e60753f1679b7a7.css" integrity="sha256-AqN61sThVcVC0naRWg4/g/XHxf7EQzUPbmB1PxZ5t6c=" rel="stylesheet"/>
+<script>
+  (function () {
+    "use strict";
+
+    
+    
+    function revealButtons() {
+      var buttons = document.querySelectorAll(".code-block .code-copy[hidden]");
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].hidden = false;
+      }
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", revealButtons);
+    } else {
+      revealButtons();
+    }
+
+    function flash(button) {
+      var label = button.querySelector(".code-copy-label");
+      var previous = label ? label.textContent : null;
+      button.classList.add("is-copied");
+      if (label) label.textContent = "Copied";
+      window.setTimeout(function () {
+        button.classList.remove("is-copied");
+        if (label && previous !== null) label.textContent = previous;
+      }, 2000);
+    }
+
+    function legacyCopy(text) {
+      var area = document.createElement("textarea");
+      area.value = text;
+      area.setAttribute("readonly", "");
+      area.style.position = "absolute";
+      area.style.left = "-9999px";
+      document.body.appendChild(area);
+      area.select();
+      var ok = false;
+      try {
+        ok = document.execCommand("copy");
+      } catch (e) {
+        ok = false;
+      }
+      document.body.removeChild(area);
+      return ok;
+    }
+
+    function copyFrom(button) {
+      var container = button.closest(".code-block");
+      if (!container) return;
+      var pre = container.querySelector("pre");
+      if (!pre) return;
+      var source = pre.querySelector("code") || pre;
+      var text = source.innerText;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(
+          function () { flash(button); },
+          function () { if (legacyCopy(text)) flash(button); }
+        );
+      } else if (legacyCopy(text)) {
+        flash(button);
+      }
+    }
+
+    document.addEventListener("click", function (event) {
+      var button = event.target.closest(".code-copy");
+      if (button) copyFrom(button);
+    });
+  })();
+</script>
+<link href="/posts/index.xml" rel="alternate" title="uzumakiryo的因陀罗相关扫描存档" type="application/rss+xml"/>
+<link href="/posts/index.xml" rel="feed" title="uzumakiryo的因陀罗相关扫描存档" type="application/rss+xml"/>
+<link href="https://example.org/posts/" rel="canonical"/>
+<meta content="https://example.org/posts/" property="og:url"/>
+<meta content="uzumakiryo的因陀罗相关扫描存档" property="og:site_name"/>
+<meta content="Posts" property="og:title"/>
+<meta content="en_us" property="og:locale"/>
+<meta content="website" property="og:type"/>
+<meta content="Posts" itemprop="name"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Posts" name="twitter:title"/>
+<style data-pagevault-runtime="true">
+/* pagevault styles */
+
+pagevault {
+  display: block;
+}
+
+pagevault[data-pv-v4] {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagevault-container {
+  text-align: center;
+  padding: 2rem;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.pagevault-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.pagevault-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.pagevault-hint {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.pagevault-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pagevault-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.pagevault-input:focus {
+  border-color: #4CAF50;
+}
+
+.pagevault-button {
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #4CAF50, #76B852);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.pagevault-button:hover {
+  opacity: 0.9;
+}
+
+.pagevault-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagevault-error {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.pagevault-remember {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.pagevault-remember input {
+  margin: 0;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .pagevault-container { background: #1e1e2e; border-color: #444; }
+  .pagevault-title { color: #e0e0e0; }
+  .pagevault-hint { color: #999; }
+  .pagevault-input { background: #2a2a3a; border-color: #555; color: #e0e0e0; }
+  .pagevault-remember { color: #999; }
+}
+</style><script data-pagevault-runtime="true">
+/* pagevault runtime v4 */
+(function() {
+  'use strict';
+
+  var CONFIG = {
+    title: "Protected Content",
+    buttonText: "Unlock",
+    errorText: "Incorrect password",
+    placeholder: "Enter password",
+    usernamePlaceholder: "Enter username",
+    defaultRemember: "ask",
+    rememberDays: 0,
+    autoPrompt: true
+  };
+  function escapeHtml(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  // v4 chunked crypto helpers for region + wrap decryption.
+  //
+  // Usage:
+  //   const result = await decryptV4(envelope, chunks, password, username, onProgress);
+  //   // result is {bytes: Uint8Array, meta: object} or null on failure.
+  //
+  // The envelope is the parsed JSON from a <script data-pv-meta>/<script id="pv-meta"> tag.
+  // chunks is an ordered array of base64 strings (region callers pass
+  // the chunk text content; wrap callers typically collect from the DOM
+  // and remove each element after decryption to free memory).
+
+  function _hexToBytes(hex) {
+    const bytes = new Uint8Array(hex.length / 2);
+    for (let i = 0; i < hex.length; i += 2) {
+      bytes[i / 2] = parseInt(hex.substr(i, 2), 16);
+    }
+    return bytes;
+  }
+
+  function _b64ToBytes(b64) {
+    const raw = atob(b64);
+    const bytes = new Uint8Array(raw.length);
+    for (let i = 0; i < raw.length; i++) bytes[i] = raw.charCodeAt(i);
+    return bytes;
+  }
+
+  function _deriveChunkIv(ivBase, chunkIndex) {
+    const iv = new Uint8Array(ivBase);
+    iv[8]  ^= (chunkIndex >>> 24) & 0xFF;
+    iv[9]  ^= (chunkIndex >>> 16) & 0xFF;
+    iv[10] ^= (chunkIndex >>> 8)  & 0xFF;
+    iv[11] ^=  chunkIndex         & 0xFF;
+    return iv;
+  }
+
+  async function _deriveKey(secret, salt) {
+    const enc = new TextEncoder();
+    const keyMaterial = await crypto.subtle.importKey(
+      'raw', enc.encode(secret), 'PBKDF2', false, ['deriveBits', 'deriveKey']
+    );
+    return crypto.subtle.deriveKey(
+      { name: 'PBKDF2', salt: salt, iterations: 310000, hash: 'SHA-256' },
+      keyMaterial,
+      { name: 'AES-GCM', length: 256 },
+      false,
+      ['decrypt']
+    );
+  }
+
+  // Content integrity hash used by region decryption to verify
+  // meta.content_hash against the decrypted text. Matches Python's
+  // content_hash(): first 16 bytes of SHA-256(utf-8(content)) as hex.
+  async function computeHash(content) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(content);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashArray = new Uint8Array(hashBuffer).slice(0, 16);
+    return Array.from(hashArray, b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  async function decryptV4(envelope, chunks, password, username, onProgress) {
+    try {
+      if (envelope.v !== 4) {
+        throw new Error('Unsupported envelope version: ' + envelope.v);
+      }
+
+      const salt = _hexToBytes(envelope.salt);
+      const secret = username ? username + ':' + password : password;
+      const wrappingKey = await _deriveKey(secret, salt);
+
+      // Unwrap CEK — try each key blob until one succeeds.
+      let cekRaw = null;
+      for (const keyBlob of envelope.keys) {
+        const blobIv = _b64ToBytes(keyBlob.iv);
+        const blobCt = _b64ToBytes(keyBlob.ct);
+        try {
+          cekRaw = await crypto.subtle.decrypt(
+            { name: 'AES-GCM', iv: blobIv }, wrappingKey, blobCt
+          );
+          break;
+        } catch (e) { continue; }
+      }
+      if (!cekRaw) throw new Error('No matching key found — wrong password?');
+
+      const cek = await crypto.subtle.importKey(
+        'raw', cekRaw, { name: 'AES-GCM', length: 256 }, false, ['decrypt']
+      );
+
+      // Decrypt metadata (independent of chunks).
+      const metaIv = _b64ToBytes(envelope.meta_iv);
+      const metaCt = _b64ToBytes(envelope.meta_ct);
+      const metaPlain = await crypto.subtle.decrypt(
+        { name: 'AES-GCM', iv: metaIv }, cek, metaCt
+      );
+      const meta = JSON.parse(new TextDecoder().decode(metaPlain));
+
+      // Decrypt chunks.
+      const ivBase = _b64ToBytes(envelope.iv_base);
+      const parts = [];
+      let totalLen = 0;
+      for (let i = 0; i < envelope.chunk_count; i++) {
+        const b64 = chunks[i];
+        if (typeof b64 !== 'string') {
+          throw new Error('Missing chunk ' + i);
+        }
+        const ct = _b64ToBytes(b64);
+        const chunkIv = _deriveChunkIv(ivBase, i);
+        const plain = await crypto.subtle.decrypt(
+          { name: 'AES-GCM', iv: chunkIv }, cek, ct
+        );
+        const plainBytes = new Uint8Array(plain);
+        parts.push(plainBytes);
+        totalLen += plainBytes.length;
+        if (onProgress) onProgress(i + 1, envelope.chunk_count);
+      }
+
+      // Concatenate chunks into one contiguous Uint8Array.
+      const bytes = new Uint8Array(totalLen);
+      let offset = 0;
+      for (const p of parts) {
+        bytes.set(p, offset);
+        offset += p.length;
+      }
+
+      return { bytes: bytes, meta: meta };
+    } catch (e) {
+      console.error('v4 decryption failed:', e);
+      return null;
+    }
+  }
+
+  // readV4FromScope — collect encrypted envelope + chunk texts from the DOM.
+  //
+  // Supports two layouts:
+  //   Region format: <script data-pv-meta> + <script data-pv-chunk="N"> siblings
+  //                  inside a <pagevault> element.
+  //   Wrap format:   <script id="pv-meta"> + <script id="pv-N"> at document level.
+  //
+  // Arguments:
+  //   scope — the element to search within (a <pagevault> el for region;
+  //            document for wrap).
+  //
+  // Returns {envelope, chunks} where envelope is the parsed JSON object and
+  // chunks is an ordered array of base64 strings, or null if the meta script
+  // is not found.  Each chunk element is removed from the DOM after being read
+  // to free memory.
+
+  function readV4FromScope(scope) {
+    // --- Locate meta script ---
+    var metaScript = null;
+
+    // Region layout: direct child with data-pv-meta attribute
+    if (scope.querySelector) {
+      metaScript = scope.querySelector('script[data-pv-meta]');
+    }
+    // Wrap layout fallback: <script id="pv-meta"> anywhere in document
+    if (!metaScript) {
+      metaScript = document.getElementById('pv-meta');
+    }
+    if (!metaScript) return null;
+
+    var envelope;
+    try {
+      envelope = JSON.parse(metaScript.textContent);
+    } catch (e) {
+      console.error('[pagevault] Invalid pv-meta JSON:', e);
+      return null;
+    }
+
+    var chunks = [];
+
+    // --- Collect chunks: region layout (data-pv-chunk attribute) ---
+    var chunkTags = [];
+    if (scope.querySelectorAll) {
+      var tagged = scope.querySelectorAll('script[data-pv-chunk]');
+      for (var i = 0; i < tagged.length; i++) {
+        var el = tagged[i];
+        var idx = parseInt(el.getAttribute('data-pv-chunk'), 10);
+        if (!Number.isNaN(idx)) {
+          chunkTags.push([idx, el.textContent || '', el]);
+        }
+      }
+    }
+
+    if (chunkTags.length > 0) {
+      // Sort by index and extract text; remove each element to free memory.
+      chunkTags.sort(function(a, b) { return a[0] - b[0]; });
+      for (var j = 0; j < chunkTags.length; j++) {
+        chunks.push(chunkTags[j][1]);
+        chunkTags[j][2].remove();
+      }
+    } else {
+      // --- Wrap layout fallback: <script id="pv-N"> ---
+      var count = envelope.chunk_count || 0;
+      for (var k = 0; k < count; k++) {
+        var chunkEl = document.getElementById('pv-' + k);
+        if (!chunkEl) {
+          console.error('[pagevault] Missing chunk element pv-' + k);
+          return null;
+        }
+        chunks.push(chunkEl.textContent || '');
+        chunkEl.remove();
+      }
+    }
+
+    return { envelope: envelope, chunks: chunks };
+  }
+
+  // Storage utilities
+  const STORAGE_KEY = 'pagevault_passwords';
+
+  function getStoredPasswords() {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (!stored) return {};
+      const data = JSON.parse(stored);
+      // Check expiration
+      const now = Date.now();
+      const filtered = {};
+      for (const [key, value] of Object.entries(data)) {
+        if (!value.expires || value.expires > now) {
+          filtered[key] = value;
+        }
+      }
+      return filtered;
+    } catch {
+      return {};
+    }
+  }
+
+  function storeCredentials(password, username, remember) {
+    if (remember === 'none') return;
+    const cred = username ? { username, password } : { password };
+    if (remember === 'session') {
+      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(cred));
+      return;
+    }
+    const data = getStoredPasswords();
+    const expires = CONFIG.rememberDays > 0
+      ? Date.now() + (CONFIG.rememberDays * 24 * 60 * 60 * 1000)
+      : null;
+    data[location.origin] = { ...cred, expires };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  }
+
+  function getStoredCredentials() {
+    // Check session first
+    const session = sessionStorage.getItem(STORAGE_KEY);
+    if (session) {
+      try {
+        const cred = JSON.parse(session);
+        return cred.password ? cred : { password: session };
+      } catch {
+        return { password: session };
+      }
+    }
+    // Check localStorage
+    const data = getStoredPasswords();
+    const entry = data[location.origin];
+    if (!entry) return null;
+    return entry.password ? entry : null;
+  }
+
+  function clearStoredPasswords() {
+    localStorage.removeItem(STORAGE_KEY);
+    sessionStorage.removeItem(STORAGE_KEY);
+  }
+
+  // URL fragment handling (only logout — password via URL removed for security)
+  function checkFragment() {
+    const hash = location.hash.slice(1);
+    if (!hash) return null;
+
+    if (hash === 'pagevault_logout') {
+      clearStoredPasswords();
+      // Navigate without the hash — works on file:// unlike history.replaceState
+      location.replace(location.pathname + location.search);
+      return 'logout';
+    }
+
+    return null;
+  }
+
+// === Script activation infrastructure ===
+  // Snapshot the original page methods ONCE at runtime load. All handlers
+  // share these — concurrent decryption is serialized via __pvActivationChain
+  // so the shims always restore the true originals, never another handler's shim.
+  var __pvOrigDocAddListener = document.addEventListener.bind(document);
+  var __pvOrigWinAddListener = window.addEventListener.bind(window);
+  var __pvOrigDocWrite = document.write.bind(document);
+  var __pvOrigDocWriteln = document.writeln.bind(document);
+  var __pvActivationChain = Promise.resolve();
+
+  // Re-execute scripts in a decrypted region. The browser does not run
+  // <script> tags inserted via innerHTML, so we re-create each one.
+  // Inline scripts run synchronously on replaceChild; external scripts
+  // (with src) load asynchronously — we wait for onload before the next.
+  // Lifecycle events (DOMContentLoaded, load) already fired before
+  // decryption, so we shim them, collect callbacks, and fire after
+  // activation. Errors in any script are caught and logged so the
+  // shims always restore via the finally block.
+  function __pvActivateContent(el, meta, done) {
+    var origOnload = window.onload;  // snapshot for change-detection
+    var dclCallbacks = [];
+    var wlCallbacks = [];
+
+    // Install shims (page-wide for the duration of activation)
+    document.write = function(s) {
+      if (s) console.warn('[pagevault] document.write() suppressed during activation:', s);
+    };
+    document.writeln = function(s) {
+      if (s) console.warn('[pagevault] document.writeln() suppressed during activation:', s);
+    };
+    document.addEventListener = function(type, fn, opts) {
+      if (type === 'DOMContentLoaded') dclCallbacks.push(fn);
+      else __pvOrigDocAddListener(type, fn, opts);
+    };
+    window.addEventListener = function(type, fn, opts) {
+      if (type === 'load') wlCallbacks.push(fn);
+      else __pvOrigWinAddListener(type, fn, opts);
+    };
+
+    function restoreShims() {
+      document.addEventListener = __pvOrigDocAddListener;
+      window.addEventListener = __pvOrigWinAddListener;
+      document.write = __pvOrigDocWrite;
+      document.writeln = __pvOrigDocWriteln;
+    }
+
+    // Permissive JS MIME-type detection (matches HTML spec)
+    function isExecutable(s) {
+      var t = (s.getAttribute('type') || '').toLowerCase();
+      if (!t) return true;
+      if (t === 'module') return true;
+      return /javascript|ecmascript|jscript/.test(t);
+    }
+
+    var scripts = Array.from(el.querySelectorAll('script'));
+
+    function finalize() {
+      restoreShims();
+      dclCallbacks.forEach(function(fn) {
+        try { fn(); } catch(e) { console.error('[pagevault] DOMContentLoaded callback error:', e); }
+      });
+      wlCallbacks.forEach(function(fn) {
+        try { fn(); } catch(e) { console.error('[pagevault] load callback error:', e); }
+      });
+      // Only re-fire onload if a decrypted script REPLACED it
+      if (typeof window.onload === 'function' && window.onload !== origOnload) {
+        try { window.onload(new Event('load')); } catch(e) { console.error('[pagevault] onload error:', e); }
+      }
+      el.dispatchEvent(new CustomEvent('pagevault:activated', {
+        bubbles: true,
+        detail: { element: el, meta: meta }
+      }));
+      done();
+    }
+
+    function activateNext(i) {
+      try {
+        // Loop through synchronous (inline) scripts; only recurse on async boundary
+        while (i < scripts.length) {
+          var old = scripts[i];
+          if (!isExecutable(old)) { i++; continue; }
+          if (!old.parentNode) { i++; continue; }  // ancestor was removed by an earlier script
+          var s = document.createElement('script');
+          for (var j = 0; j < old.attributes.length; j++) {
+            var a = old.attributes[j];
+            s.setAttribute(a.name, a.value);
+          }
+          var hasSrc = old.hasAttribute('src');
+          if (!hasSrc && old.textContent) s.textContent = old.textContent;
+          if (hasSrc) {
+            // Capture index and src in IIFE so closures don't share mutated state
+            (function(idx, srcUrl) {
+              s.onload = function() { activateNext(idx + 1); };
+              s.onerror = function() {
+                console.error('[pagevault] Failed to load:', srcUrl);
+                activateNext(idx + 1);
+              };
+            })(i, old.getAttribute('src'));
+            old.parentNode.replaceChild(s, old);
+            return;  // suspend until onload/onerror fires
+          }
+          old.parentNode.replaceChild(s, old);
+          i++;
+        }
+        finalize();
+      } catch (e) {
+        console.error('[pagevault] script activation error:', e);
+        try { finalize(); } catch(_) {}
+      }
+    }
+
+    activateNext(0);
+  }
+
+  // Element handler — uses a plain class instead of Custom Elements because
+  // the spec requires hyphenated names and <pagevault> has no hyphen.
+  // All values set via innerHTML are either:
+  //   - escapeHtml()-wrapped user strings (hint, title, placeholder, button text)
+  //   - static HTML template literals (form structure, lock icon)
+  //   - decrypted content from AES-256-GCM (trusted after authenticated decryption)
+  class PagevaultHandler {
+    constructor(el) {
+      this.el = el;
+      this.el._pvDecrypted = false;
+      // Snapshot v4 envelope + chunks before rendering the prompt
+      // (rendering clears innerHTML which would discard them).
+      // readV4FromScope is provided by core/chunks.js.
+      this._snapshot = readV4FromScope(el);
+      this._render();
+      this._tryAutoDecrypt();
+    }
+
+    _render() {
+      const el = this.el;
+      const hint = el.getAttribute('data-hint');
+      const title = el.getAttribute('data-title') || CONFIG.title;
+      const remember = el.getAttribute('data-remember') || CONFIG.defaultRemember;
+      const isUserMode = el.getAttribute('data-mode') === 'user';
+
+      el.innerHTML = `
+        <div class="pagevault-container">
+          <div class="pagevault-icon">🔒</div>
+          <div class="pagevault-title">${escapeHtml(title)}</div>
+          ${hint ? `<div class="pagevault-hint">${escapeHtml(hint)}</div>` : ''}
+          <form class="pagevault-form">
+            ${isUserMode ? `<input type="text" class="pagevault-input pagevault-username" placeholder="${escapeHtml(CONFIG.usernamePlaceholder)}" autocomplete="username">` : ''}
+            <input type="password" class="pagevault-input" placeholder="${escapeHtml(CONFIG.placeholder)}" autocomplete="current-password">
+            ${remember === 'ask' ? `
+              <label class="pagevault-remember">
+                <input type="checkbox" name="remember">
+                Remember on this device
+              </label>
+            ` : ''}
+            <button type="submit" class="pagevault-button">${escapeHtml(CONFIG.buttonText)}</button>
+            <div class="pagevault-error" style="display: none;"></div>
+          </form>
+        </div>
+      `;
+
+      const form = el.querySelector('form');
+      const passwordInput = el.querySelector('input[type="password"]');
+      const usernameInput = el.querySelector('.pagevault-username');
+      const error = el.querySelector('.pagevault-error');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const password = passwordInput.value;
+        if (!password) return;
+        const username = usernameInput ? usernameInput.value : null;
+
+        // Capture checkbox state BEFORE decryption replaces innerHTML
+        const rememberCheckbox = el.querySelector('input[name="remember"]');
+        const wantsRemember = remember === 'local' || (rememberCheckbox && rememberCheckbox.checked);
+
+        const button = el.querySelector('button');
+        button.disabled = true;
+        button.textContent = 'Decrypting...';
+
+        const success = await this._decrypt(password, username);
+
+        if (!success) {
+          error.textContent = CONFIG.errorText;
+          error.style.display = 'block';
+          button.disabled = false;
+          button.textContent = CONFIG.buttonText;
+          passwordInput.value = '';
+          passwordInput.focus();
+        } else {
+          // Store credentials if requested
+          if (wantsRemember) {
+            storeCredentials(password, username, 'local');
+          } else if (remember === 'session') {
+            storeCredentials(password, username, 'session');
+          }
+        }
+      });
+
+      // Focus appropriate input if auto-prompt
+      if (CONFIG.autoPrompt) {
+        const focusTarget = usernameInput || passwordInput;
+        setTimeout(() => focusTarget.focus(), 100);
+      }
+    }
+
+    async _tryAutoDecrypt() {
+      // Check URL fragment (only logout supported)
+      const fragment = checkFragment();
+      if (fragment === 'logout') return;
+
+      // Try stored credentials
+      const cred = getStoredCredentials();
+      if (cred) {
+        await this._decrypt(cred.password, cred.username || null);
+      }
+    }
+
+    async _decrypt(password, username) {
+      const el = this.el;
+      if (!this._snapshot) return false;
+
+      const result = await decryptV4(
+        this._snapshot.envelope,
+        this._snapshot.chunks,
+        password,
+        username
+      );
+      if (result === null) return false;
+
+      const meta = result.meta || {};
+      if (meta.kind && meta.kind !== 'html_fragment') {
+        console.error('Unexpected envelope kind for region:', meta.kind);
+        return false;
+      }
+
+      // Decode UTF-8 text and strip trailing NUL padding (from --pad).
+      let content = new TextDecoder().decode(result.bytes);
+      content = content.replace(/\0+$/, '');
+
+      // Verify content hash if present in encrypted metadata.
+      const expectedHash = meta.content_hash;
+      if (expectedHash) {
+        const actualHash = await computeHash(content);
+        if (actualHash !== expectedHash) {
+          console.error('Content hash mismatch - decryption may be corrupted');
+          return false;
+        }
+      }
+
+      // Clear v4 attributes and reveal content.
+      el.removeAttribute('data-pv-v4');
+      el.removeAttribute('data-mode');
+      // Decrypted content is trusted — it was authenticated by AES-256-GCM
+      // (user encrypted their own content; AES-GCM provides authenticity)
+      el.innerHTML = content;
+      el._pvDecrypted = true;
+
+      // Fire decrypted event immediately — content is in the DOM,
+      // listeners that just need to know "the content is here" don't
+      // wait for script activation. A separate pagevault:activated
+      // event fires after all scripts have run.
+      el.dispatchEvent(new CustomEvent('pagevault:decrypted', {
+        bubbles: true,
+        detail: { element: el, meta: meta }
+      }));
+
+      // Serialize script activation across handlers via a page-level
+      // promise chain. Global shims (document.addEventListener,
+      // document.write, etc.) cannot be safely interleaved across
+      // concurrent decryptions, so we ensure only one activation runs
+      // at a time. See __pvActivateContent for the activation routine.
+      __pvActivationChain = __pvActivationChain.then(function() {
+        return new Promise(function(resolve) {
+          __pvActivateContent(el, meta, resolve);
+        });
+      });
+
+      return true;
+    }
+  }
+
+  // Initialize all v4-encrypted <pagevault> elements.
+  // Wrapped in DOMContentLoaded since the script is in <head> but the
+  // elements are in <body> — they don't exist yet at script parse time.
+  function initAll() {
+    document.querySelectorAll('pagevault[data-pv-v4]').forEach(function(el) {
+      if (!el._pvHandler) {
+        el._pvHandler = new PagevaultHandler(el);
+      }
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+  } else {
+    initAll();
+  }
+
+})();
+</script></head><body class="ma0 avenir bg-near-white production is-section is-section"><pagevault data-pv-v4="" data-remember="ask"><script data-pv-meta="" type="application/json">{"v": 4, "alg": "aes-256-gcm", "kdf": "pbkdf2-sha256", "iter": 310000, "salt": "7869bc1a60ec0d31f85eeaf927e1eda5", "keys": [{"iv": "q1HN5GAfspcrrTfT", "ct": "LUkc8cYj+NI5W+D423+69fDdbbTq5J8RCep8N2AhTaGs5KBCM4M0+0bL/fxafkVi"}], "iv_base": "FOrwh77S1+Ix1nV0", "chunk_size": 1048576, "chunk_count": 1, "total_size": 1840, "meta_iv": "9LH49Xm1dsaaPkex", "meta_ct": "GrqCS5qZ1dblLg/ADVYCYfZZ2pQgWcdX6/+SHi5UAuZ2o7C56tD/WKeMx/oiKikum5cvyPkGt0HMMEgZRlpcEFwp9+ruz9c3Kd7eRd4Zf1JleuGDX5Bqy35Pf8uBw9W4x6K/gkRwlgOEQ7dboSJqXOCV5/cV8W/T1lvLPiwkBc2hc+jAbn9FxlNiZ5SbzlfDweWFf9GE67bws+q6Ao3zpxDehiMzWrTSd0z1GSC5CUrdXNM="}</script><script data-pv-chunk="0" type="x-pv">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</script></pagevault></body>
+</html>
